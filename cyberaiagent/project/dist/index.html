@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard AI - Cybersecurity Assistant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/index-CdFjo-wv.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>CyberGuard AI</h1>
+                </div>
+                <p class="tagline">Your Intelligent Cybersecurity Assistant</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2><i class="fas fa-robot"></i> AI Agent Status</h2>
+                    <div class="status-indicators">
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>Input Processor</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>State Tracker</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>Task Planner</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot active"></span>
+                            <span>Output Generator</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-header">
+                            <i class="fas fa-robot"></i>
+                            <span>CyberGuard AI</span>
+                            <span class="timestamp" id="initialTimestamp"></span>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm CyberGuard AI, your intelligent cybersecurity assistant. I can help you with:</p>
+                            <ul>
+                                <li><strong>Threat Analysis:</strong> Analyze potential security threats and vulnerabilities</li>
+                                <li><strong>Incident Response:</strong> Guide you through cybersecurity incident procedures</li>
+                                <li><strong>Security Assessment:</strong> Evaluate your security posture</li>
+                                <li><strong>Best Practices:</strong> Provide cybersecurity recommendations</li>
+                                <li><strong>Risk Management:</strong> Help identify and mitigate security risks</li>
+                            </ul>
+                            <p>What cybersecurity challenge can I assist you with today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="userInput" placeholder="Describe your cybersecurity concern or question..." maxlength="500">
+                        <button id="sendButton" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-action" data-message="I think my system has been compromised. What should I do?">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Security Incident
+                        </button>
+                        <button class="quick-action" data-message="Can you help me assess the security of my network?">
+                            <i class="fas fa-network-wired"></i>
+                            Network Security
+                        </button>
+                        <button class="quick-action" data-message="What are the latest cybersecurity threats I should be aware of?">
+                            <i class="fas fa-virus"></i>
+                            Threat Intelligence
+                        </button>
+                        <button class="quick-action" data-message="Help me create a cybersecurity policy for my organization">
+                            <i class="fas fa-file-shield"></i>
+                            Security Policy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="feature-card">
+                    <h3><i class="fas fa-brain"></i> AI Components</h3>
+                    <div class="component-list">
+                        <div class="component">
+                            <h4>Input Understanding</h4>
+                            <p>Natural language processing for cybersecurity queries</p>
+                        </div>
+                        <div class="component">
+                            <h4>State Tracker</h4>
+                            <p>Maintains conversation context and security state</p>
+                        </div>
+                        <div class="component">
+                            <h4>Task Planner</h4>
+                            <p>Plans appropriate security responses and actions</p>
+                        </div>
+                        <div class="component">
+                            <h4>Output Generator</h4>
+                            <p>Generates actionable cybersecurity guidance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3><i class="fas fa-chart-line"></i> Security Metrics</h3>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">Threats Detected</span>
+                            <span class="metric-value" id="threatsDetected">0</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Incidents Resolved</span>
+                            <span class="metric-value" id="incidentsResolved">0</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Security Score</span>
+                            <span class="metric-value" id="securityScore">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3><i class="fas fa-history"></i> Recent Activities</h3>
+                    <div class="activity-log" id="activityLog">
+                        <div class="activity-item">
+                            <i class="fas fa-info-circle"></i>
+                            <span>System initialized</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="ai-agent.js"></script>
+</body>
+</html>
